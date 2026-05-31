@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const photoSchema = new mongoose.Schema(
-
+  {
     imageUrl: {
       type: String,
       required: true,
@@ -34,7 +34,7 @@ const photoSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-photoSchema.index({ uploaderName: "text", caption: "text", tags: "text" });
+photoSchema.index({ caption: "text", tags: "text" });
 photoSchema.index({ createdAt: -1 });
 photoSchema.index({ publicId: 1 }, { unique: true });
 
