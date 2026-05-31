@@ -1,0 +1,26 @@
+{
+  "name": "memories-backend",
+  "version": "1.0.0",
+  "description": "Node.js API for the Memories event photo-sharing app.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/seed/sampleData.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "helmet": "latest",
+    "mongoose": "latest",
+    "morgan": "latest"
+  },
+  "devDependencies": {
+    "@eslint/js": "latest",
+    "eslint": "latest",
+    "nodemon": "latest"
+  }
+}
