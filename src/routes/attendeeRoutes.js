@@ -1,12 +1,13 @@
 import { Router } from "express";
 import { createAttendee, getAttendeeById, getAttendees } from "../controllers/attendeeController.js";
-import { validateObjectId } from "../controllers/photoController.js";
-import { validateAttendee } from "../validators/attendeeValidator.js";
+import { validateAttendee, updateAttendee, deleteAttendee, validateObjectId } from "../validators/attendeeValidator.js";
 
 const router = Router();
 
 router.get("/", getAttendees);
 router.post("/", validateAttendee, createAttendee);
-router.get("/:id", validateObjectId, getAttendeeById);
-
+router.route("/:id")
+  .get(validateObjectId, getAttendeeById)
+  .put(validateObjectId, updateAttendee)
+  .delete(validateObjectId, deleteAttendee);
 export default router;
