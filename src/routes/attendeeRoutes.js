@@ -7,7 +7,7 @@ const router = Router();
 router.get("/", getAttendees);
 router.post("/", validateAttendee, createAttendee);
 router.route("/:id")
-  .get(validateObjectId, getAttendeeById)
-  .put(validateObjectId, updateAttendee)
-  .delete(validateObjectId, deleteAttendee);
+  .get(validateAttendee, getAttendeeById)
+  .put(validateAttendee, updateAttendee)
+  .delete(validateAttendee, deleteAttendee);
 export default router;
