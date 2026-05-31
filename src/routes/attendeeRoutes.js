@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { createAttendee, getAttendeeById, getAttendees,  updateAttendee, deleteAttendee,} from "../controllers/attendeeController.js";
-import { validateAttendee, validateObjectId } from "../validators/attendeeValidator.js";
+import { validateAttendee } from "../validators/attendeeValidator.js";
 
 const router = Router();
 
