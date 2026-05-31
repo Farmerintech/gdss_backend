@@ -9,5 +9,5 @@ router.post("/", validateAttendee, createAttendee);
 router.route("/:id")
   .get(validateAttendee, getAttendeeById)
   .put(validateAttendee, updateAttendee)
-  .delete(validateAttendee, deleteAttendee);
+  .delete( deleteAttendee);
 export default router;
