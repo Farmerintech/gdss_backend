@@ -25,7 +25,7 @@ export async function createPhoto(req, res, next) {
     const photo = await Photo.create({
       imageUrl: req.body.imageUrl,
       publicId: req.body.publicId,
-      caption: req.body.caption,
+      caption: req.body.caption || '',
       tags: req.body.tags || []
     });
 
