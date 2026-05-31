@@ -1,10 +1,5 @@
 export function validatePhoto(req, res, next) {
-  const { uploaderName, imageUrl, publicId, tags } = req.body;
-
-  if (!uploaderName || uploaderName.trim().length < 2) {
-    res.status(400);
-    return next(new Error("uploaderName is required and must be at least 2 characters"));
-  }
+  const {  imageUrl, publicId, tags } = req.body;
 
   if (!imageUrl || !isValidUrl(imageUrl)) {
     res.status(400);
