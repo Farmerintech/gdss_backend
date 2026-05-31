@@ -1,18 +1,7 @@
 import mongoose from "mongoose";
 
 const photoSchema = new mongoose.Schema(
-  {
-    uploaderName: {
-      type: String,
-      required: true,
-      trim: true,
-      minlength: 2,
-      maxlength: 120
-    },
-    attendee: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Attendee"
-    },
+
     imageUrl: {
       type: String,
       required: true,
